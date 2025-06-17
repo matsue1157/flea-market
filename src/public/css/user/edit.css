@@ -1,0 +1,125 @@
+/* 全体レイアウト */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* 親コンテナ：横幅680pxで中央寄せ */
+.profile-edit-container {
+    width: 680px;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+}
+
+/* プロフィール設定タイトル */
+.profile-edit-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+/* プロフィール画像のプレースホルダー（背景グレー円） */
+.placeholder-profile,
+.img-rounded-full {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #D9D9D9;
+    object-fit: cover;
+}
+
+/* 画像エリア：親コンテナ内で横並び */
+.image-select-wrapper {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* 画像選択ボタン */
+.select-image-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 179px;
+    height: 49px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FF5555;
+    border: 2px solid #FF5555;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.select-image-label:hover {
+    background-color: #ffe5e5;
+}
+
+/* 各フォームグループ */
+.form-group {
+    margin-bottom: 32px;
+}
+
+/* ラベル */
+.form-label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+/* テキスト入力 */
+.form-input {
+    width: 100%;
+    height: 55px;
+    border: 1px solid #5F5F5F;
+    border-radius: 4px;
+    padding: 0 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* エラー表示 */
+.error-message {
+    color: #FF5555;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+/* 更新ボタンラッパー */
+.submit-button-wrapper {
+    margin-top: 40px;
+}
+
+/* 更新ボタン */
+.submit-button {
+    width: 100%;
+    height: 60px;
+    background-color: #FF5555;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 26px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #e04444;
+}

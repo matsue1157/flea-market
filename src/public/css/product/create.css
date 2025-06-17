@@ -1,0 +1,279 @@
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   フォーム全体レイアウト
+   ========================= */
+.form-wrapper {
+    width: 680px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* =========================
+   画像アップロード
+   ========================= */
+.image-upload-wrapper {
+    max-width: 680px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px dashed #5F5F5F;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+}
+
+.image-upload-label {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.file-input-button {
+    display: inline-block;
+    border: 2px solid #FF5555;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FF5655;
+    cursor: pointer;
+    background: transparent;
+    transition: background-color 0.3s;
+}
+
+.file-input-button:hover {
+    background-color: #FF5555;
+    color: white;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* =========================
+   エラーメッセージ
+   ========================= */
+.form-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* -------------------------------
+   商品の詳細タイトル + 下線
+-------------------------------- */
+.section-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+
+/* -------------------------------
+   カテゴリー選択スタイル
+-------------------------------- */
+.product-category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.product-category-item {
+    position: relative;
+}
+
+.product-category-item input[type="checkbox"] {
+    display: none;
+    /* 非表示にする（見た目はspan） */
+}
+
+.product-category-item span {
+    display: inline-block;
+    padding: 6px 16px;
+    border: 1px solid #e53935;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #e53935;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* チェックされている場合のスタイル */
+.product-category-item input[type="checkbox"]:checked+span {
+    background-color: #e53935;
+    /* 赤色 */
+    color: #fff;
+    border-color: #e53935;
+}
+
+/* -------------------------------
+   セレクトボックス（商品の状態）
+-------------------------------- */
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    /* 必要に応じて変更可 */
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 8px 40px 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    appearance: none;
+    /* 標準の矢印を消す */
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    cursor: pointer;
+}
+
+/* ラベル用 */
+.form-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* エラー文用 */
+.form-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* =========================
+   フォーム共通スタイル
+   ========================= */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    border: 1px solid #5F5F5F;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-textarea {
+    height: 125px;
+    resize: vertical;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-with-icon span {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* =========================
+   送信ボタン
+   ========================= */
+.form-action {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button {
+    background: #FF5555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 14px 60px;
+    cursor: pointer;
+}
+
+/* =========================
+   レスポンシブ対応
+   ========================= */
+@media (max-width: 768px) {
+    .form-wrapper {
+        width: 90%;
+        padding: 0 16px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .form-group label {
+        font-size: 18px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form-textarea {
+        height: 100px;
+    }
+
+    .input-with-icon span {
+        font-size: 20px;
+    }
+
+    .submit-button {
+        font-size: 20px;
+        padding: 12px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .form-group {
+        gap: 4px;
+    }
+
+    .product-category-list {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .submit-button {
+        width: 100%;
+        font-size: 18px;
+    }
+}

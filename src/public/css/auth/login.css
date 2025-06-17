@@ -1,0 +1,166 @@
+/* 全体コンテナ */
+.auth-content {
+    position: relative;
+    /* または static */
+    width: 680px;
+    max-width: 90vw;
+    /* 画面幅の90%を最大幅に */
+    height: auto;
+    /* 中身に合わせる */
+    margin: 200px auto 0;
+    /* 上に200px、左右中央寄せ */
+    background-color: #fff;
+    padding: 40px 50px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* タイトル */
+.auth-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 48px;
+}
+
+/* ステータスメッセージ */
+.auth-status {
+    color: #22c55e;
+    /* 緑 */
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* フォーム */
+.auth-form {
+    position: relative;
+}
+
+/* ラベル */
+.auth-label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+/* 入力枠のラッパー */
+.auth-input-wrapper {
+    position: relative;
+    margin-bottom: 36px;
+    border: 1px solid #5F5F5F;
+    border-radius: 4px;
+    padding: 6px 12px;
+    box-sizing: border-box;
+}
+
+/* input */
+.auth-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    padding: 8px 0;
+    background-color: transparent;
+}
+
+/* バリデーションエラー時の枠線色 */
+.auth-input-error {
+    border-bottom: 2px solid #ef4444;
+}
+
+/* エラーメッセージ */
+.auth-error-message {
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+/* ログインボタン */
+.auth-button {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    background-color: #FF5555;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 36px;
+}
+
+.auth-button:hover {
+    background-color: #e04e4e;
+}
+
+/* 会員登録リンク */
+.auth-footer {
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+}
+
+.auth-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .auth-content {
+            width: 90%;
+            max-width: 400px;
+            margin: 40px auto;
+            /* 上下40pxに変更 */
+            padding: 30px 20px;
+            box-shadow: none;
+        }
+
+    .auth-title {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .auth-label {
+        font-size: 18px;
+    }
+
+    .auth-input-wrapper {
+        margin-bottom: 24px;
+        padding: 8px 10px;
+    }
+
+    .auth-input {
+        font-size: 16px;
+        padding: 6px 0;
+    }
+
+    .auth-button {
+        font-size: 18px;
+        padding: 12px 0;
+        border-radius: 6px;
+        margin-bottom: 24px;
+    }
+
+    .auth-footer {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,210 @@
+/* 共通設定 */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* プロフィールセクション全体 */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1024px;
+    margin: 160px auto 0 auto;
+    padding: 0 20px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* プロフィール画像＋背景 */
+.profile-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.ellipse {
+    width: 150px;
+    height: 150px;
+    background: #D9D9D9;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+/* ユーザー名 */
+.user-name {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* 編集ボタン */
+.edit-button-wrapper {
+    text-decoration: none;
+    margin-left: auto;
+}
+
+.edit-button-rectangle {
+    width: 310px;
+    height: 59px;
+    border: 2px solid #FF5555;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.edit-button-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 59px;
+    color: #FF5555;
+    text-align: center;
+}
+
+/* タブエリア */
+.toppage-list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    max-width: 1512px;
+    margin: 0 auto;
+    padding: 0 129px;
+    border-bottom: 2px solid #5F5F5F;
+    height: 47px;
+    box-sizing: border-box;
+}
+
+.toppage-tab {
+    width: 155px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    color: #5F5F5F;
+}
+
+.toppage-tab.active {
+    color: #FF0000;
+}
+
+/* 商品一覧 */
+.products-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+/* 商品1件分のブロック */
+.product-image {
+    width: 150px;
+    text-align: center;
+}
+
+/* 商品画像の枠 */
+.product-image .rectangle {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.product-image .rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 商品名 */
+.product-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* レスポンシブ：中画面 */
+@media (max-width: 1080px) {
+
+    .user-info,
+    .toppage-list,
+    .product-list {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-list {
+        justify-content: center;
+    }
+}
+
+/* レスポンシブ：スマホ */
+@media (max-width: 768px) {
+    .user-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 100px;
+    }
+
+    .edit-button-wrapper {
+        margin-left: 0;
+    }
+
+    .toppage-list {
+        padding: 0 20px;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .toppage-tab {
+        flex: 1 1 120px;
+        font-size: 20px;
+        justify-content: center;
+    }
+
+    .product-card {
+        width: 90vw;
+        max-width: 290px;
+    }
+
+    .product-thumbnail {
+        height: auto;
+        aspect-ratio: 290 / 281;
+        line-height: normal;
+        padding: 20px 0;
+    }
+
+    .product-name {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,38 @@
+header {
+    background-color: #000000;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* ロゴ配置用 */
+header>div {
+    position: relative;
+    width: 370px;
+    height: 36px;
+    margin-left: 25px;
+    margin-top: 22px;
+}
+
+/* ロゴ画像 */
+.logo {
+    position: absolute;
+    width: 370px;
+    height: 36px;
+    left: 0;
+    top: 0;
+}
+
+/* 画面幅が640px以上なら左寄せにする (sm:justify-start) */
+@media (min-width: 640px) {
+    header>div {
+        justify-content: flex-start;
+    }
+}
+
+/* ロゴ画像サイズ調整（class="logo"） */
+.logo {
+    height: 3rem;
+    /* Tailwindのsm:h-16 */
+    width: auto;
+}

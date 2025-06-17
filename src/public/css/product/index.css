@@ -1,0 +1,115 @@
+/* 親コンテナ */
+.toppage-list {
+    position: absolute;
+    width: 1512px;
+    height: 47px;
+    left: 0;
+    top: 125px;
+    /* ← ここを調整することで上に配置できる */
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* 仕切り線 */
+.line-2 {
+    position: absolute;
+    width: 1512px;
+    height: 0;
+    left: 0;
+    top: 47px;
+    border: 2px solid #5F5F5F;
+    transform: rotate(-0.08deg);
+}
+
+/* 共通タブスタイル */
+.toppage-tab {
+    position: absolute;
+    width: 155px;
+    height: 40px;
+    top: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    border-bottom: 2px solid transparent;
+    color: #5F5F5F;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* おすすめタブ */
+.toppage-tab.osusume {
+    left: 129px;
+}
+
+/* マイリストタブ */
+.toppage-tab.mylist {
+    left: 336px;
+    color: #FF0000;
+}
+
+/* アクティブ */
+.toppage-tab.active {
+    border-bottom: 2px
+}
+
+/* 親コンテナ：商品一覧行 */
+.products-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    width: 100%;
+    max-width: 1013px;
+    margin: 250px auto 0;
+    /* 上にスペース、中央揃え */
+}
+
+.product-image {
+    width: 290px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.product-box {
+    width: 290px;
+    height: 281px;
+    background: #D9D9D9;
+    border-radius: 4px;
+    position: relative;
+}
+
+.product-image-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 290px;
+    height: 290px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+}
+
+.product-name {
+    margin-top: 8px;
+    width: 290px;
+    height: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+}
