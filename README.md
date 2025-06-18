@@ -135,4 +135,4 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 - category_product：中間テーブル（product-category）
 
 - payment_methods：支払い方法（user紐付け想定）
-- shipping_addresses：配送先住所（user紐付け）
+- shipping_addresses：配送先住所（user紐付け）# flea-market-test
