@@ -23,7 +23,7 @@
         @endif
 
         <!-- 購入フォーム -->
-        <form action="{{ route('purchases.store', $product->id) }}" method="POST">
+        <form action="{{ route('purchase.checkout', $product->id) }}" method="POST">
             @csrf
 
             <!-- 支払い方法 -->
@@ -42,20 +42,24 @@
             <!-- 配送先住所 -->
             <div class="mb-4">
                 <label for="shipping_address" class="block font-semibold mb-1">配送先住所</label>
-                <input type="text" name="shipping_address" id="shipping_address" value="{{ old('shipping_address', $address) }}" class="w-full border rounded px-3 py-2" placeholder="例: 東京都渋谷区...">
+                <input type="text" name="shipping_address" id="shipping_address"
+                    value="{{ old('shipping_address', $address) }}" class="w-full border rounded px-3 py-2"
+                    placeholder="例: 東京都渋谷区〇〇1-2-3">
             </div>
 
             <!-- 購入ボタン -->
             <div class="mt-6">
-                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-full">
                     購入する
                 </button>
             </div>
         </form>
 
         <!-- 戻る -->
-        <div class="mt-4">
-            <a href="{{ route('products.show', $product->id) }}" class="text-blue-500 hover:underline">← 商品詳細に戻る</a>
+        <div class="mt-4 text-center">
+            <a href="{{ route('products.show', $product->id) }}" class="text-blue-500 hover:underline">
+                ← 商品詳細に戻る
+            </a>
         </div>
     </div>
 @endsection

@@ -32,11 +32,17 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/products/{product}/like', [LikeController::class, 'destroy'])->name('products.unlike');
 
     // 購入
-Route::get('/products/{product}/purchase', [PurchaseController::class, 'create'])->name('purchases.create');
-    Route::post('/products/{product}/purchase', [PurchaseController::class, 'store'])->name('purchases.store');
+    Route::get('/products/{product}/purchase', [PurchaseController::class, 'create'])->name('purchases.create');
+Route::post('/products/{product}/purchase', [PurchaseController::class, 'checkout'])->name('purchase.checkout');
+    Route::get('/purchase/success', [PurchaseController::class, 'success'])->name('purchase.success');
+    Route::get('/profile/purchases', [ProfileController::class, 'purchasedProducts'])->name('profile.purchases');
+
     // 購入した商品一覧ページ
     Route::get('/profile/purchases', [ProfileController::class, 'purchasedProducts'])->name('profile.purchases');
-    
+    // web.php
+    Route::post('/purchase/{product}', [PurchaseController::class, 'checkout'])->name('purchase.checkout');
+    Route::get('/purchase/success', [PurchaseController::class, 'success'])->name('purchase.success');
+
 
     // ダッシュボード
     Route::get('/dashboard', fn() => view('dashboard'))->name('dashboard');

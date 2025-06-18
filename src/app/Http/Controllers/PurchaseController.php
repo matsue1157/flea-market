@@ -48,8 +48,8 @@ class PurchaseController extends Controller
         $product->load('seller');
         $paymentMethods = PaymentMethod::all();
         $address = auth()->user()->address ?? '';
-        
-    return view('purchase.create', compact('product', 'paymentMethods'));
+
+    return view('purchase.create', compact('product', 'paymentMethods', 'address'));
 
     }
 }

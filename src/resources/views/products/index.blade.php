@@ -19,12 +19,18 @@
     <!-- 商品カードエリア -->
     <div class="products-row">
         @forelse ($products as $product)
-                <a href="{{ route('products.show', $product->id) }}" class="product-card">
+            <a href="{{ route('products.show', $product->id) }}" class="product-card">
 
+                <div class="relative">
                     <x-product-image :product="$product" />
 
-                    <div class="product-name">{{ $product->name }}</div>
-                </a>
+                    @if ($product->is_sold)
+                        <span class="sold-badge">SOLD</span>
+                    @endif
+                </div>
+
+                <div class="product-name">{{ $product->name }}</div>
+            </a>
         @empty
             <p>{{ $tab === 'mylist' ? 'マイリストに商品がありません。' : '出品した商品はまだありません。' }}</p>
         @endforelse
